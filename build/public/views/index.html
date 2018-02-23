@@ -1,0 +1,24 @@
+<head><link href="css/index.css" rel="stylesheet"></head>{% extends 'layout.html' %}
+{% block title %}My Page{% endblock %}
+{% block head %}
+{% parent %}
+     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/systemjs/0.20.19/system.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.17.1/axios.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="hand" id="thumb">
+        <div class="finger"></div>
+        <div class="finger"></div>
+        <div class="finger"></div>
+        <div class="finger"></div>
+        <div class="finger thumb"></div>
+        <div class="arm"></div>
+    </div>
+    <span class="hide" id="animation">+1</span> 
+
+    <script type="text/javascript">
+    let f=new Thumb(0,$('#thumb'));
+        f.clickAction();
+    </script>
+{% endblock %}<script type="text/javascript" src="scripts/index.bound.js"></script><script type="text/javascript" src="scripts/comjs.bound.js"></script>
